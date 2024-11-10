@@ -164,6 +164,24 @@ The table below summarizes the performance of each model on key evaluation metri
 * The Decision Tree model had the lowest scores across all metrics, with an F1 score of 76%. Decision trees often struggle with generalization, particularly in cases where data may not be perfectly separable by individual features.
 * This result highlights the importance of ensemble approaches, like Random Forest, which aggregate multiple trees to improve robustness.
 
+## Feature Importance Plots
+To gain insights into the factors influencing each model’s predictions, feature importance plots were generated for models that support feature importance evaluation, such as XGBoost, LightGBM, and Random Forest. These plots display the contribution of each feature toward the model’s decision-making process, highlighting the most impactful variables.
+
+1. Feature Coefficients in Logistic Regression
+<img width="623" alt="image" src="https://github.com/user-attachments/assets/5180005e-3008-4d33-b281-062ac3539e7a">
+
+2. Feature Importance in Decision Tree
+<img width="646" alt="image" src="https://github.com/user-attachments/assets/6aab0cae-7f40-4723-b15c-81817cc62eea">
+
+3. Feature Importance in Random Forest Model
+<img width="754" alt="image" src="https://github.com/user-attachments/assets/be88dd46-cdef-4874-b1dc-eb6dfd7d8716">
+
+4. Feature Importance in XGB Model
+<img width="755" alt="image" src="https://github.com/user-attachments/assets/834db9ea-77bb-40b0-be11-6979ed88801b">
+
+5. Feature Importance in LightGBM Model
+<img width="560" alt="image" src="https://github.com/user-attachments/assets/27437909-4027-4eb1-a26d-2ae5dd25dcde">
+
 
 ## Streamlit Application
 A Streamlit application was developed to provide an interactive and user-friendly interface for exploring the model predictions. The app allows users to:
