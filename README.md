@@ -127,29 +127,51 @@ These tests provide insights into which features are statistically significant f
 
 ## Model Building ⌛
 Model-building process includes:
-1. 
+### Data Preprocessing 
+Data preprocessing is essential for effective model training. In this project, columns are divided into those that are prone to outliers and those that are not. Two types of scalers are applied:
+* RobustScaler for columns with outliers, minimizing the effect of extreme values.
+* StandardScaler for columns without outliers, normalizing the feature distribution.
 
+Categorical and binary columns are passed through without scaling, preserving their original values.
 
+### Pipeline Architecture:
+The pipeline is designed to streamline preprocessing and model training. It includes:
+1. Preprocessing: A ColumnTransformer applies the appropriate scaler to each feature set.
+2. Model Training: The specified model is incorporated into the pipeline, followed by grid search to tune hyperparameters.
+3. Evaluation: Cross-validation is applied to determine the optimal parameters, maximizing the F1 score.
 
-
+### Model Selection and Evaluation
+Several models were evaluated to determine the best classifier for this dataset.
 
 ## Results and Discussion
 ### Model Performance
-
-
+The table below summarizes the performance of each model on key evaluation metrics, focusing on Accuracy, Recall, Precision, and F1 Score. The F1 Score was prioritized in model selection to balance precision and recall, as this metric is essential in cases where both false positives and false negatives have significant implications.
+<img width="842" alt="image" src="https://github.com/user-attachments/assets/565c7216-db60-41dc-8959-a5a2a0644909">
 
 ## Discussion
-The model provides insights into the impact of different features on heart disease prediction. Results from statistical tests and feature importance analysis confirm that factors like age, chest pain type, and cholesterol levels are significant predictors.
+1. Top Performers:
+* Logistic Regression and K-Nearest Neighbors (KNN) models showed the best overall performance, achieving an F1 score of 84.62%. Both models also had the highest recall (91.67%), making them effective in correctly identifying positive instances.
+* These results suggest that simpler models with well-tuned parameters can be highly effective, particularly in balanced datasets or where feature relationships can be captured linearly.
+
+2. Ensemble Models:
+* XGBoost and LightGBM performed competitively, with an F1 score of 81.63% and high precision scores. These models are known for their robustness and ability to handle complex, non-linear relationships in the data.
+* However, they didn’t outperform the simpler models, indicating that, in this case, the dataset may not contain enough complexity to benefit significantly from ensemble methods.
+
+3. Support Vector Machine (SVM) and Random Forest:
+* Both SVM and Random Forest models achieved similar scores, with an F1 score of 80%. While they performed slightly lower than the top models, they may still be useful in applications where interpretability or non-linearity is crucial.
+
+4. Decision Tree:
+* The Decision Tree model had the lowest scores across all metrics, with an F1 score of 76%. Decision trees often struggle with generalization, particularly in cases where data may not be perfectly separable by individual features.
+* This result highlights the importance of ensemble approaches, like Random Forest, which aggregate multiple trees to improve robustness.
 
 
-
-
-
-
+## Streamlit Application
+A Streamlit application was developed to provide an interactive and user-friendly interface for exploring the model predictions. The app allows users to:
+* User Input: Users can input the data for respective features.
+* Model Selection: Users can select among the trained models (e.g., Logistic Regression, LightGBM, XGBoost) to see how each model performs on the uploaded data.
 
 ### Future Improvements 
 * Enhanced Feature Engineering: Adding more medical data and extract more detailed features.
 * Advanced Models: Experimenting with ensemble techniques and deep learning for potentially better accuracy.
 * Advanced Visualizations: Interactive dashboards for data visualization and trend analysis.
-
 
