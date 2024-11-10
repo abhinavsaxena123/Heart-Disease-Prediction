@@ -76,15 +76,17 @@ streamlit run app.py
 
 ## Exploratory Data Analysis (EDA)
 The EDA process includes the following steps to better understand the data:
-> Feature Distribution: Visualizing the distribution of continuous and categorical features
-
-> Correlations: Heatmaps and scatter plots to observe relationships between features.
-
-> Heart Disease Presence: Analyzing how features correlate with heart disease outcomes.
+* Feature Distribution: Visualizing the distribution of continuous and categorical features
+* Correlations: Heatmaps and scatter plots to observe relationships between features.
+* Heart Disease Presence: Analyzing how features correlate with heart disease outcomes.
 
 ## Visualizations 
 The following plots have been generated:
+* Distribution plot for Heart Disease By gender: 
+<img width="437" alt="image" src="https://github.com/user-attachments/assets/89becf9c-3fa9-40d0-b87a-6b5611747145">
 
+* Distribution of Max Heart Rate by Heart Disease Status:
+<img width="476" alt="image" src="https://github.com/user-attachments/assets/4aa458e5-6f5d-4d44-885b-d6c98c8f4834">
 
 
 ## Results From Statistical Tests
