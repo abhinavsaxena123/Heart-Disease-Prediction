@@ -88,6 +88,9 @@ The following plots have been generated:
 * Distribution of Max Heart Rate by Heart Disease Status:
 <img width="476" alt="image" src="https://github.com/user-attachments/assets/4aa458e5-6f5d-4d44-885b-d6c98c8f4834">
 
+* Box-Plot for Numerical Features:
+<img width="830" alt="image" src="https://github.com/user-attachments/assets/57443e4d-0ea7-4e48-8bb2-24c7941a1609">
+
 
 ## Results From Statistical Tests
 To ensure statistical relevance, I conducted tests such as:
